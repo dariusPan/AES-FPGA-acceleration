@@ -55,7 +55,9 @@ architecture Behavioral of key_expansion is
     signal nr_of_rounds : natural range 0 to 11;
     
 begin
-    
+
+valid <= '1' when state = Write_Outputs else '0';
+
     process (clk)
 	begin
         if rising_edge(clk) then
