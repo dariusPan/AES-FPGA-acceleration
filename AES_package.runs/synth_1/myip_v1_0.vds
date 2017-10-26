@@ -1,0 +1,402 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Wed Oct 25 18:52:19 2017
+# Process ID: 7404
+# Current directory: C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.runs/synth_1
+# Command line: vivado.exe -log myip_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source myip_v1_0.tcl
+# Log file: C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.runs/synth_1/myip_v1_0.vds
+# Journal file: C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source myip_v1_0.tcl -notrace
+Command: synth_design -top myip_v1_0 -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8676 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 282.902 ; gain = 72.840
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'myip_v1_0' [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/AES_v1_0.vhd:115]
+WARNING: [Synth 8-3848] Net valid in module/entity myip_v1_0 does not have driver. [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/AES_v1_0.vhd:136]
+INFO: [Synth 8-256] done synthesizing module 'myip_v1_0' (1#1) [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/AES_v1_0.vhd:115]
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[31] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[30] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[29] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[28] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[27] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[26] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[25] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[24] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[23] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[22] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[21] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[20] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[19] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[18] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[17] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[16] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[15] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[14] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[13] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[12] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[11] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[10] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[9] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[8] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[7] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[6] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[5] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[4] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[3] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[2] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[1] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[0] driven by constant 0
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[31]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[30]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[29]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[28]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[27]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[26]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[25]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[24]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[23]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[22]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[21]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[20]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[19]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[18]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[17]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[16]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[15]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[14]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[13]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[12]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[11]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[10]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[9]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[8]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[7]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[6]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[5]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[4]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[3]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[2]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[1]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[0]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TLAST
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 320.336 ; gain = 110.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 320.336 ; gain = 110.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 320.336 ; gain = 110.273
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'myip_v1_0'
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nr_of_reads" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nr_of_writes" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nr_of_writes" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "S_AXIS_TREADY" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "M_AXIS_TVALID" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                            00001 |                              000
+             read_inputs |                            00010 |                              010
+               computing |                            00100 |                              011
+           write_outputs |                            01000 |                              100
+                assemble |                            10000 |                              001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'myip_v1_0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 330.219 ; gain = 120.156
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   8 Input      5 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+	   6 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module myip_v1_0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   8 Input      5 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+	   6 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[31] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[30] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[29] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[28] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[27] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[26] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[25] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[24] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[23] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[22] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[21] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[20] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[19] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[18] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[17] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[16] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[15] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[14] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[13] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[12] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[11] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[10] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[9] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[8] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[7] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[6] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[5] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[4] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[3] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[2] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[1] driven by constant 0
+WARNING: [Synth 8-3917] design myip_v1_0 has port M_AXIS_TDATA[0] driven by constant 0
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[31]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[30]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[29]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[28]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[27]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[26]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[25]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[24]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[23]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[22]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[21]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[20]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[19]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[18]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[17]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[16]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[15]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[14]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[13]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[12]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[11]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[10]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[9]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[8]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[7]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[6]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[5]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[4]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[3]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[2]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[1]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TDATA[0]
+WARNING: [Synth 8-3331] design myip_v1_0 has unconnected port S_AXIS_TLAST
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 457.473 ; gain = 247.410
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 457.473 ; gain = 247.410
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 457.531 ; gain = 247.469
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 457.531 ; gain = 247.469
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 457.531 ; gain = 247.469
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 457.531 ; gain = 247.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 457.531 ; gain = 247.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 457.531 ; gain = 247.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 457.531 ; gain = 247.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     1|
+|3     |LUT2 |     2|
+|4     |LUT3 |     1|
+|5     |LUT4 |     6|
+|6     |LUT5 |     2|
+|7     |LUT6 |     7|
+|8     |FDRE |    11|
+|9     |FDSE |     1|
+|10    |IBUF |     4|
+|11    |OBUF |    35|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    71|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 457.531 ; gain = 247.469
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 131 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 457.531 ; gain = 247.469
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 457.531 ; gain = 247.469
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 131 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 545.121 ; gain = 335.059
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.runs/synth_1/myip_v1_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.613 . Memory (MB): peak = 545.121 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 25 18:52:59 2017...

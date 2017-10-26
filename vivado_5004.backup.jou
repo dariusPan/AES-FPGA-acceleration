@@ -1,0 +1,83 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Wed Oct 25 18:50:13 2017
+# Process ID: 5004
+# Current directory: C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1752 C:\Users\Darius\Desktop\Y4S1\EE4218\AES_package\AES_package.xpr
+# Log file: C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/vivado.log
+# Journal file: C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.xpr
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source test_top.tcl
+close_sim
+launch_simulation
+source test_top.tcl
+close_sim
+launch_simulation
+source test_top.tcl
+close_sim
+launch_simulation
+source test_top.tcl
+close_sim
+launch_simulation
+source test_top.tcl
+save_wave_config {C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+set_property xsim.view C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+save_wave_config {C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+save_wave_config {C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+set_property -name {xsim.simulate.runtime} -value {10ms} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+set_property -name {xsim.simulate.runtime} -value {10000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+save_wave_config {C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg}
+close_sim

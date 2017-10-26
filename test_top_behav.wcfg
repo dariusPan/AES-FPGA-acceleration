@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="test_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="10000000001fs"></ZoomEndTime>
+      <Cursor1Time time="5221088000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="193"></NameColumnWidth>
+      <ValueColumnWidth column_width="199"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="41" />
+   <wvobject fp_name="/test_top/ACLK" type="logic">
+      <obj_property name="ElementShortName">ACLK</obj_property>
+      <obj_property name="ObjectShortName">ACLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/ARESETN" type="logic">
+      <obj_property name="ElementShortName">ARESETN</obj_property>
+      <obj_property name="ObjectShortName">ARESETN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/S_AXIS_TREADY" type="logic">
+      <obj_property name="ElementShortName">S_AXIS_TREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/S_AXIS_TDATA" type="array">
+      <obj_property name="ElementShortName">S_AXIS_TDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/S_AXIS_TLAST" type="logic">
+      <obj_property name="ElementShortName">S_AXIS_TLAST</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TLAST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/S_AXIS_TVALID" type="logic">
+      <obj_property name="ElementShortName">S_AXIS_TVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/M_AXIS_TVALID" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_TVALID</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/M_AXIS_TDATA" type="array">
+      <obj_property name="ElementShortName">M_AXIS_TDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/M_AXIS_TLAST" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_TLAST</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TLAST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/M_AXIS_TREADY" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_TREADY</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/key_enable" type="logic">
+      <obj_property name="ElementShortName">key_enable</obj_property>
+      <obj_property name="ObjectShortName">key_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/key_valid" type="logic">
+      <obj_property name="ElementShortName">key_valid</obj_property>
+      <obj_property name="ObjectShortName">key_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/input_shift" type="array">
+      <obj_property name="ElementShortName">input_shift[127:0]</obj_property>
+      <obj_property name="ObjectShortName">input_shift[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/output_shift" type="array">
+      <obj_property name="ElementShortName">output_shift[127:0]</obj_property>
+      <obj_property name="ObjectShortName">output_shift[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/input_key" type="array">
+      <obj_property name="ElementShortName">input_key[127:0]</obj_property>
+      <obj_property name="ObjectShortName">input_key[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/output_key" type="array">
+      <obj_property name="ElementShortName">output_key[1407:0]</obj_property>
+      <obj_property name="ObjectShortName">output_key[1407:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/input_add" type="array">
+      <obj_property name="ElementShortName">input_add[127:0]</obj_property>
+      <obj_property name="ObjectShortName">input_add[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/output_add" type="array">
+      <obj_property name="ElementShortName">output_add[127:0]</obj_property>
+      <obj_property name="ObjectShortName">output_add[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/input" type="array">
+      <obj_property name="ElementShortName">input[127:0]</obj_property>
+      <obj_property name="ObjectShortName">input[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/output" type="array">
+      <obj_property name="ElementShortName">output[127:0]</obj_property>
+      <obj_property name="ObjectShortName">output[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/i_BOX_INV" type="array">
+      <obj_property name="ElementShortName">i_BOX_INV[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_BOX_INV[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/o_BOX_INV" type="array">
+      <obj_property name="ElementShortName">o_BOX_INV[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_BOX_INV[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/i_BOX" type="array">
+      <obj_property name="ElementShortName">i_BOX[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_BOX[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/o_BOX" type="array">
+      <obj_property name="ElementShortName">o_BOX[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_BOX[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/out1" type="array">
+      <obj_property name="ElementShortName">out1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">out1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/c_KEY_ENABLE_W" type="logic">
+      <obj_property name="ElementShortName">c_KEY_ENABLE_W</obj_property>
+      <obj_property name="ObjectShortName">c_KEY_ENABLE_W</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/c_KEY_ENABLE_R" type="logic">
+      <obj_property name="ElementShortName">c_KEY_ENABLE_R</obj_property>
+      <obj_property name="ObjectShortName">c_KEY_ENABLE_R</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/c_KEY_ADDR_W" type="array">
+      <obj_property name="ElementShortName">c_KEY_ADDR_W[10:0]</obj_property>
+      <obj_property name="ObjectShortName">c_KEY_ADDR_W[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/c_KEY_ADDR_R" type="array">
+      <obj_property name="ElementShortName">c_KEY_ADDR_R[10:0]</obj_property>
+      <obj_property name="ObjectShortName">c_KEY_ADDR_R[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/r_i_KEY" type="array">
+      <obj_property name="ElementShortName">r_i_KEY[127:0]</obj_property>
+      <obj_property name="ObjectShortName">r_i_KEY[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/r_o_KEY" type="array">
+      <obj_property name="ElementShortName">r_o_KEY[127:0]</obj_property>
+      <obj_property name="ObjectShortName">r_o_KEY[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/key_expand/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/key_expand/input" type="array">
+      <obj_property name="ElementShortName">input[127:0]</obj_property>
+      <obj_property name="ObjectShortName">input[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/key_expand/enable" type="logic">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/key_expand/state" type="other">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/key_expand/temp" type="array">
+      <obj_property name="ElementShortName">temp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">temp[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/key_expand/temp_round" type="array">
+      <obj_property name="ElementShortName">temp_round[31:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_round[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/key_expand/temp_new" type="array">
+      <obj_property name="ElementShortName">temp_new[31:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_new[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/key_expand/temp_output" type="array">
+      <obj_property name="ElementShortName">temp_output[1407:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_output[1407:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/key_expand/temp_mem" type="array">
+      <obj_property name="ElementShortName">temp_mem[127:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_mem[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/key_expand/temp_mem_new" type="array">
+      <obj_property name="ElementShortName">temp_mem_new[127:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_mem_new[127:0]</obj_property>
+   </wvobject>
+</wave_config>
