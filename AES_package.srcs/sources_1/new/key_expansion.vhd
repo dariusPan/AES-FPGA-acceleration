@@ -53,71 +53,62 @@ architecture Behavioral of key_expansion is
     signal state : STATE_TYPE := Read_Inputs;
     signal nr_of_computes : natural range 0 to 4;
     signal nr_of_rounds : natural range 0 to 11;
+    signal temp_valid: std_logic := '0';
     
 begin
-
-valid <= '1' when state = Write_Outputs else '0';
-
+valid <= temp_valid;
+output <= temp_output;
     process (clk)
 	begin
         if rising_edge(clk) then
             case state is        
-                  when Read_Inputs =>
-                    if enable = '1' then
-                        state <= Rounding;
-                        nr_of_rounds <= 11;
-                        temp_round <= input(31 downto 0);
-                        temp_output(127 downto 0) <= input;
-                        temp_mem <= input;
-                    end if;
-                    
-                  when Rounding =>
+              when Read_Inputs =>
+                if enable = '1' then
+                    state <= Rounding;
+                    nr_of_rounds <= 11;
+                    temp_round <= input(31 downto 0);
+                    temp_output(127 downto 0) <= input;
+                    temp_mem <= input;
+                end if;
+                
+              when Rounding =>
+                if nr_of_rounds = 1 then
+                    state <= Write_Outputs;
+                else
                     if nr_of_rounds = 11 then
                         temp(31 downto 24) <= (temp_new(31 downto 24) xor "00000001");
-                        state <= Computing;
-                        nr_of_computes <= 4;
                     elsif nr_of_rounds = 10 then
                         temp(31 downto 24) <= (temp_new(31 downto 24) xor "00000010");
-                        state <= Computing;
-                        nr_of_computes <= 4;
                     elsif nr_of_rounds = 9 then
                         temp(31 downto 24) <= (temp_new(31 downto 24) xor "00000100");
-                        state <= Computing;
-                        nr_of_computes <= 4;
                     elsif nr_of_rounds = 8 then
                         temp(31 downto 24) <= (temp_new(31 downto 24) xor "00001000");
-                        state <= Computing;
-                        nr_of_computes <= 4;
                     elsif nr_of_rounds = 7 then
                         temp(31 downto 24) <= (temp_new(31 downto 24) xor "00010000");
-                        state <= Computing;
-                        nr_of_computes <= 4;
                     elsif nr_of_rounds = 6 then
                         temp(31 downto 24) <= (temp_new(31 downto 24) xor "00100000");
-                        state <= Computing;
-                        nr_of_computes <= 4;
                     elsif nr_of_rounds = 5 then
                         temp(31 downto 24) <= (temp_new(31 downto 24) xor "01000000");
-                        state <= Computing;
-                        nr_of_computes <= 4;
                     elsif nr_of_rounds = 4 then
                         temp(31 downto 24) <= (temp_new(31 downto 24) xor "10000000");
-                        state <= Computing;
-                        nr_of_computes <= 4;
                     elsif nr_of_rounds = 3 then
                         temp(31 downto 24) <= (temp_new(31 downto 24) xor "00011011");
-                        state <= Computing;
-                        nr_of_computes <= 4;
                     elsif nr_of_rounds = 2 then
-                        temp(31 downto 24) <= (temp_new(31 downto 24) xor "00110110");
-                        state <= Computing;
-                        nr_of_computes <= 4;
-                    elsif nr_of_rounds = 1 then
-                        state <= Write_Outputs;
+                        temp(31 downto 24) <= (temp_new(31 downto 24) xor "00110110");    
                     end if;
-                    temp(23 downto 0) <= temp_new(23 downto 0);
-                  
-                  when Computing =>
+                    state <= Computing;
+                    nr_of_computes <= 4;
+                end if;
+                temp(23 downto 0) <= temp_new(23 downto 0);
+              
+              when Computing =>
+                if nr_of_computes = 0 then
+                    state <= Rounding;
+                    temp_round <= temp_mem_new(31 downto 0);
+                    nr_of_rounds <= nr_of_rounds - 1;
+                    temp_mem <= temp_mem_new;
+                    temp_output(127 downto 0) <= temp_mem_new;
+                else
                     if nr_of_computes = 4 then
                         temp_mem_new(127 downto 96) <= temp xor temp_mem(127 downto 96);
                         temp_output <= std_logic_vector(shift_left(unsigned(temp_output), 128));
@@ -127,18 +118,13 @@ valid <= '1' when state = Write_Outputs else '0';
                         temp_mem_new(63 downto 32) <= temp_mem_new(95 downto 64) xor temp_mem(63 downto 32);
                     elsif nr_of_computes = 1 then
                         temp_mem_new(31 downto 0) <= temp_mem_new(63 downto 32) xor temp_mem(31 downto 0);
-                    elsif nr_of_computes = 0 then
-                        state <= Rounding;
-                        temp_round <= temp_mem_new(31 downto 0);
-                        nr_of_rounds <= nr_of_rounds - 1;
-                        temp_mem <= temp_mem_new;
-                        temp_output(127 downto 0) <= temp_mem_new;
                     end if;
                     nr_of_computes <= nr_of_computes - 1;
-                    
-                  when Write_Outputs =>
-                  	output <= temp_output;
-                  	state <= Read_Inputs;
+                end if;
+                
+              when Write_Outputs =>
+                state <= Read_Inputs;
+                temp_valid <= '1';
 	       end case;
 	   end if;
 	end process;

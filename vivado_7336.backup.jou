@@ -1,0 +1,90 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Thu Oct 26 13:40:29 2017
+# Process ID: 7336
+# Current directory: C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3864 C:\Users\Darius\Desktop\Y4S1\EE4218\AES_package\AES_package.xpr
+# Log file: C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/vivado.log
+# Journal file: C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.xpr
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+save_wave_config {C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+save_wave_config {C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg}
+write_hw_ila_data my_hw_ila_data_file.zip [upload_hw_ila_data hw_ila_1]
+write_hw_ila_data my_hw_ila_data_file.zip [upload_hw_ila_data test_top_behav.wcfg]
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+close [ open C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/InvCipher.vhd w ]
+add_files C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/InvCipher.vhd
+save_wave_config {C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg}
+save_wave_config {C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg}
+close [ open C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/InvSub.vhd w ]
+add_files C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/InvSub.vhd
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+save_wave_config {C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+save_wave_config {C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+save_wave_config {C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+save_wave_config {C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+save_wave_config {C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+save_wave_config {C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/test_top_behav.wcfg
+source test_top.tcl
+close_sim

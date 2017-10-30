@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1120100000fs"></ZoomStartTime>
-      <ZoomEndTime time="1280776939fs"></ZoomEndTime>
-      <Cursor1Time time="1220000000fs"></Cursor1Time>
+      <ZoomStartTime time="725300000fs"></ZoomStartTime>
+      <ZoomEndTime time="1312402319fs"></ZoomEndTime>
+      <Cursor1Time time="1064625000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="193"></NameColumnWidth>
-      <ValueColumnWidth column_width="187"></ValueColumnWidth>
+      <ValueColumnWidth column_width="214"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="36" />
+   <WVObjectSize size="33" />
    <wvobject fp_name="/test_top/ACLK" type="logic">
       <obj_property name="ElementShortName">ACLK</obj_property>
       <obj_property name="ObjectShortName">ACLK</obj_property>
@@ -27,13 +27,65 @@
       <obj_property name="ElementShortName">ARESETN</obj_property>
       <obj_property name="ObjectShortName">ARESETN</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_top/S_AXIS_TREADY" type="logic">
-      <obj_property name="ElementShortName">S_AXIS_TREADY</obj_property>
-      <obj_property name="ObjectShortName">S_AXIS_TREADY</obj_property>
+   <wvobject fp_name="/test_top/aes/state" type="other">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
    </wvobject>
    <wvobject fp_name="/test_top/S_AXIS_TDATA" type="array">
       <obj_property name="ElementShortName">S_AXIS_TDATA[31:0]</obj_property>
       <obj_property name="ObjectShortName">S_AXIS_TDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/aes/input_mem" type="array">
+      <obj_property name="ElementShortName">input_mem[0:3][31:0]</obj_property>
+      <obj_property name="ObjectShortName">input_mem[0:3][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/aes/key_enable" type="logic">
+      <obj_property name="ElementShortName">key_enable</obj_property>
+      <obj_property name="ObjectShortName">key_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/aes/key_valid" type="logic">
+      <obj_property name="ElementShortName">key_valid</obj_property>
+      <obj_property name="ObjectShortName">key_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/aes/input_key" type="array">
+      <obj_property name="ElementShortName">input_key[127:0]</obj_property>
+      <obj_property name="ObjectShortName">input_key[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/aes/output_key" type="array">
+      <obj_property name="ElementShortName">output_key[1407:0]</obj_property>
+      <obj_property name="ObjectShortName">output_key[1407:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/aes/key" type="array">
+      <obj_property name="ElementShortName">key[1407:0]</obj_property>
+      <obj_property name="ObjectShortName">key[1407:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/aes/nr_of_reads" type="other">
+      <obj_property name="ElementShortName">nr_of_reads</obj_property>
+      <obj_property name="ObjectShortName">nr_of_reads</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/aes/nr_of_writes" type="other">
+      <obj_property name="ElementShortName">nr_of_writes</obj_property>
+      <obj_property name="ObjectShortName">nr_of_writes</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/aes/cipher_enable" type="logic">
+      <obj_property name="ElementShortName">cipher_enable</obj_property>
+      <obj_property name="ObjectShortName">cipher_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/aes/cipher_valid" type="logic">
+      <obj_property name="ElementShortName">cipher_valid</obj_property>
+      <obj_property name="ObjectShortName">cipher_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/aes/input_cipher" type="array">
+      <obj_property name="ElementShortName">input_cipher[127:0]</obj_property>
+      <obj_property name="ObjectShortName">input_cipher[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/aes/output_cipher" type="array">
+      <obj_property name="ElementShortName">output_cipher[127:0]</obj_property>
+      <obj_property name="ObjectShortName">output_cipher[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/S_AXIS_TREADY" type="logic">
+      <obj_property name="ElementShortName">S_AXIS_TREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TREADY</obj_property>
    </wvobject>
    <wvobject fp_name="/test_top/S_AXIS_TLAST" type="logic">
       <obj_property name="ElementShortName">S_AXIS_TLAST</obj_property>
@@ -43,13 +95,13 @@
       <obj_property name="ElementShortName">S_AXIS_TVALID</obj_property>
       <obj_property name="ObjectShortName">S_AXIS_TVALID</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_top/M_AXIS_TVALID" type="logic">
-      <obj_property name="ElementShortName">M_AXIS_TVALID</obj_property>
-      <obj_property name="ObjectShortName">M_AXIS_TVALID</obj_property>
-   </wvobject>
    <wvobject fp_name="/test_top/M_AXIS_TDATA" type="array">
       <obj_property name="ElementShortName">M_AXIS_TDATA[31:0]</obj_property>
       <obj_property name="ObjectShortName">M_AXIS_TDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_top/M_AXIS_TVALID" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_TVALID</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TVALID</obj_property>
    </wvobject>
    <wvobject fp_name="/test_top/M_AXIS_TLAST" type="logic">
       <obj_property name="ElementShortName">M_AXIS_TLAST</obj_property>
@@ -59,14 +111,9 @@
       <obj_property name="ElementShortName">M_AXIS_TREADY</obj_property>
       <obj_property name="ObjectShortName">M_AXIS_TREADY</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_top/key_expand/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
    <wvobject fp_name="group214" type="group">
       <obj_property name="label">KeyExpansion</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/test_top/input_key" type="array">
          <obj_property name="ElementShortName">input_key[127:0]</obj_property>
          <obj_property name="ObjectShortName">input_key[127:0]</obj_property>
@@ -82,6 +129,30 @@
       <wvobject fp_name="/test_top/key_enable" type="logic">
          <obj_property name="ElementShortName">key_enable</obj_property>
          <obj_property name="ObjectShortName">key_enable</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group802" type="group">
+      <obj_property name="label">InvCipher</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/test_top/cipher_key" type="array">
+         <obj_property name="ElementShortName">cipher_key[1407:0]</obj_property>
+         <obj_property name="ObjectShortName">cipher_key[1407:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_top/cipher_enable" type="logic">
+         <obj_property name="ElementShortName">cipher_enable</obj_property>
+         <obj_property name="ObjectShortName">cipher_enable</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_top/input_cipher" type="array">
+         <obj_property name="ElementShortName">input_cipher[127:0]</obj_property>
+         <obj_property name="ObjectShortName">input_cipher[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_top/output_cipher" type="array">
+         <obj_property name="ElementShortName">output_cipher[127:0]</obj_property>
+         <obj_property name="ObjectShortName">output_cipher[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_top/cipher_valid" type="logic">
+         <obj_property name="ElementShortName">cipher_valid</obj_property>
+         <obj_property name="ObjectShortName">cipher_valid</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group212" type="group">
@@ -175,114 +246,10 @@
    <wvobject fp_name="group218" type="group">
       <obj_property name="label">KeyExpansion_Details</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/test_top/key_expand/enable" type="logic">
-         <obj_property name="ElementShortName">enable</obj_property>
-         <obj_property name="ObjectShortName">enable</obj_property>
-      </wvobject>
-      <wvobject fp_name="/test_top/key_expand/valid" type="logic">
-         <obj_property name="ElementShortName">valid</obj_property>
-         <obj_property name="ObjectShortName">valid</obj_property>
-      </wvobject>
-      <wvobject fp_name="/test_top/key_expand/state" type="other">
-         <obj_property name="ElementShortName">state</obj_property>
-         <obj_property name="ObjectShortName">state</obj_property>
-      </wvobject>
-      <wvobject fp_name="/test_top/key_expand/input" type="array">
-         <obj_property name="ElementShortName">input[127:0]</obj_property>
-         <obj_property name="ObjectShortName">input[127:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/test_top/key_expand/temp_mem" type="array">
-         <obj_property name="ElementShortName">temp_mem[127:0]</obj_property>
-         <obj_property name="ObjectShortName">temp_mem[127:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/test_top/key_expand/temp_mem_new" type="array">
-         <obj_property name="ElementShortName">temp_mem_new[127:0]</obj_property>
-         <obj_property name="ObjectShortName">temp_mem_new[127:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/test_top/key_expand/temp" type="array">
-         <obj_property name="ElementShortName">temp[31:0]</obj_property>
-         <obj_property name="ObjectShortName">temp[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/test_top/key_expand/temp_round" type="array">
-         <obj_property name="ElementShortName">temp_round[31:0]</obj_property>
-         <obj_property name="ObjectShortName">temp_round[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/test_top/key_expand/temp_new" type="array">
-         <obj_property name="ElementShortName">temp_new[31:0]</obj_property>
-         <obj_property name="ObjectShortName">temp_new[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/test_top/key_expand/temp_output" type="array">
-         <obj_property name="ElementShortName">temp_output[1407:0]</obj_property>
-         <obj_property name="ObjectShortName">temp_output[1407:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-      </wvobject>
    </wvobject>
-   <wvobject fp_name="/test_top/invcipher/keys" type="array">
-      <obj_property name="ElementShortName">keys[1407:0]</obj_property>
-      <obj_property name="ObjectShortName">keys[1407:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_top/invcipher/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_top/invcipher/enable" type="logic">
-      <obj_property name="ElementShortName">enable</obj_property>
-      <obj_property name="ObjectShortName">enable</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_top/invcipher/input" type="array">
-      <obj_property name="ElementShortName">input[127:0]</obj_property>
-      <obj_property name="ObjectShortName">input[127:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_top/invcipher/state" type="other">
-      <obj_property name="ElementShortName">state</obj_property>
-      <obj_property name="ObjectShortName">state</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_top/invcipher/valid" type="logic">
-      <obj_property name="ElementShortName">valid</obj_property>
-      <obj_property name="ObjectShortName">valid</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_top/invcipher/output" type="array">
-      <obj_property name="ElementShortName">output[127:0]</obj_property>
-      <obj_property name="ObjectShortName">output[127:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_top/invcipher/temp" type="array">
-      <obj_property name="ElementShortName">temp[31:0]</obj_property>
-      <obj_property name="ObjectShortName">temp[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_top/invcipher/temp_round" type="array">
-      <obj_property name="ElementShortName">temp_round[31:0]</obj_property>
-      <obj_property name="ObjectShortName">temp_round[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_top/invcipher/temp_new" type="array">
-      <obj_property name="ElementShortName">temp_new[31:0]</obj_property>
-      <obj_property name="ObjectShortName">temp_new[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_top/invcipher/temp_key" type="array">
-      <obj_property name="ElementShortName">temp_key[1407:0]</obj_property>
-      <obj_property name="ObjectShortName">temp_key[1407:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_top/invcipher/temp_value" type="array">
-      <obj_property name="ElementShortName">temp_value[127:0]</obj_property>
-      <obj_property name="ObjectShortName">temp_value[127:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_top/invcipher/temp_value_new" type="array">
-      <obj_property name="ElementShortName">temp_value_new[127:0]</obj_property>
-      <obj_property name="ObjectShortName">temp_value_new[127:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_top/invcipher/temp_before_key" type="array">
-      <obj_property name="ElementShortName">temp_before_key[127:0]</obj_property>
-      <obj_property name="ObjectShortName">temp_before_key[127:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_top/invcipher/temp_add" type="array">
-      <obj_property name="ElementShortName">temp_add[127:0]</obj_property>
-      <obj_property name="ObjectShortName">temp_add[127:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_top/invcipher/end_round" type="array">
-      <obj_property name="ElementShortName">end_round[127:0]</obj_property>
-      <obj_property name="ObjectShortName">end_round[127:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_top/invcipher/nr_of_rounds" type="other">
-      <obj_property name="ElementShortName">nr_of_rounds</obj_property>
-      <obj_property name="ObjectShortName">nr_of_rounds</obj_property>
+   <wvobject fp_name="group796" type="group">
+      <obj_property name="label">InvCipher_Details</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>

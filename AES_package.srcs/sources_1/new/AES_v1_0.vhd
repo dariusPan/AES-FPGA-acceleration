@@ -73,7 +73,7 @@ use ieee.numeric_std.all;
 -- Entity Section
 ------------------------------------------------------------------------------
 
-entity myip_v1_0 is
+entity AES_InvCipher_v1_0 is
 	port 
 	(
 		-- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -94,7 +94,7 @@ entity myip_v1_0 is
 attribute SIGIS : string; 
 attribute SIGIS of ACLK : signal is "Clk"; 
 
-end myip_v1_0;
+end AES_InvCipher_v1_0;
 
 ------------------------------------------------------------------------------
 -- Architecture Section
@@ -112,61 +112,53 @@ end myip_v1_0;
 -- You will need to modify this example or implement a new architecture for
 -- ENTITY hw_acc to implement your coprocessor
 
-architecture EXAMPLE of myip_v1_0 is
+architecture EXAMPLE of AES_InvCipher_v1_0 is
 
    -- Total number of input data.
    constant NUMBER_OF_INPUT_WORDS  : natural := 4;
 
    -- Total number of output data
    constant NUMBER_OF_OUTPUT_WORDS : natural := 4;
-   
-   -- Total number of computation
-   constant NUMBER_OF_COMPUTATION : natural := 4;
 
-   type STATE_TYPE is (Idle, Assemble, Read_Inputs, Computing, Write_Outputs);
-   signal state : STATE_TYPE;
+   type STATE_TYPE is (Idle, Key_Expansion, Read_Inputs, Computing, Write_Outputs, Write_Buffer);
+   signal state : STATE_TYPE := Idle;
 
    -- Counters to store the number inputs read & outputs written
    signal nr_of_reads  : natural range 0 to NUMBER_OF_INPUT_WORDS - 1;
    signal nr_of_writes : natural range 0 to NUMBER_OF_OUTPUT_WORDS - 1;
-   signal nr_of_computes : natural range 0 to NUMBER_OF_COMPUTATION;
    
-  -- For s-box
-   signal enable: std_logic := '0';
-   signal valid: std_logic;
-   signal input: std_logic_vector(31 downto 0) := (others => '0');
-   signal output: std_logic_vector(31 downto 0);
-   type out_array is array (1 to 4) of std_logic_vector(31 downto 0);
+  -- For key expansion
+   signal key_enable: std_logic := '0';
+   signal input_key: std_logic_vector(127 downto 0) := (others => '0');
+   signal key_valid: std_logic := '0';
+   signal output_key: std_logic_vector(1407 downto 0);
+   
+   -- for InvCipher
+   signal cipher_valid: std_logic := '0';
+   signal cipher_enable: std_logic := '0';
+   signal input_cipher: std_logic_vector(127 downto 0) := (others => '0');
+   signal output_cipher: std_logic_vector(127 downto 0);
    type in_array is array (0 to 3) of std_logic_vector(31 downto 0);
-   signal output_mem: out_array := ((others=> (others=>'0')));
    signal input_mem: in_array := ((others=> (others=>'0')));
-   signal key: in_array := ((others=> (others=>'0')));
 
+   signal key: std_logic_vector(1407 downto 0) := (others => '0');
+   signal output: std_logic_vector(127 downto 0) := (others => '1');
 begin
    -- CAUTION:
    -- The sequence in which data are read in and written out should be
    -- consistent with the sequence they are written and read in the
    -- driver's hw_acc.c file
 
-   S_AXIS_TREADY  <= '1' when state = Read_Inputs else '0';
-   M_AXIS_TVALID <= '1' when state = Write_Outputs else '0';
-   M_AXIS_TLAST <= '1' when (state = Write_Outputs and nr_of_writes = 0) else '0';
-
-   M_AXIS_TDATA <= (others => '0');
-        
---keys :entity work.bram (rtl)
---        generic map (WIDTH => 128, DEPTH => 11)
---        port map(
---        clk => clk,
---        enable => '1',
---        write_enable => c_KEY_ENABLE_W,
---        addr_write => c_KEY_ADDR_W,
---        data_in => r_o_KEY,
---        read_enable => c_KEY_ENABLE_R,
---        addr_read => c_KEY_ADDR_R,
---        data_out => r_o_KEY
---        );
-        
+    S_AXIS_TREADY  <= '1' when state = Read_Inputs else '0';
+    M_AXIS_TVALID <= '1' when (state = Write_Outputs) else '0';
+    M_AXIS_TLAST <= '1' when (state = Write_Outputs and nr_of_writes = 0) else '0';
+   
+    M_AXIS_TDATA <= output(127 downto 96) when (state = Write_Outputs and nr_of_writes = 3) else
+                    output(95 downto 64) when (state = Write_Outputs and nr_of_writes = 2) else 
+                    output(63 downto 32) when (state = Write_Outputs and nr_of_writes = 1) else
+                    output(31 downto 0) when (state = Write_Outputs and nr_of_writes = 0);
+                      
+--    key <= x"2b7e151628aed2a6abf7158809cf4f3ca0fafe1788542cb123a339392a6c7605f2c295f27a96b9435935807a7359f67f3d80477d4716fe3e1e237e446d7a883bef44a541a8525b7fb671253bdb0bad00d4d1c6f87c839d87caf2b8bc11f915bc6d88a37a110b3efddbf98641ca0093fd4e54f70e5f5fc9f384a64fb24ea6dc4fead27321b58dbad2312bf5607f8d292fac7766f319fadc2128d12941575c006ed014f9a8c9ee2589e13f0cc8b6630ca6";
 process (ACLK) is
    begin  -- process The_SW_accelerator
     if ACLK'event and ACLK = '1' then     -- Rising clock edge
@@ -176,7 +168,6 @@ process (ACLK) is
         state        <= Idle;
         nr_of_reads  <= 0;
         nr_of_writes <= 0;
-        nr_of_computes <= 0;
       else
         case state is
           when Idle =>            
@@ -187,53 +178,46 @@ process (ACLK) is
 
           when Read_Inputs =>
             if (S_AXIS_TVALID = '1') then
-              input_mem(nr_of_reads) <= std_logic_vector(unsigned(S_AXIS_TDATA));
-              if (nr_of_reads = 0) then
-                state        <= Computing;
-                nr_of_computes <= NUMBER_OF_COMPUTATION;
-              else
-                nr_of_reads <= nr_of_reads - 1;
-              end if;
+                input_mem(nr_of_reads) <= std_logic_vector(unsigned(S_AXIS_TDATA));
+                  if (nr_of_reads = 0) then
+                    if key_valid = '1' then
+                        input_cipher <= input_mem(3) & input_mem(2) & input_mem(1) & std_logic_vector(unsigned(S_AXIS_TDATA));
+                        state        <= Computing;
+                        cipher_enable <= '1';
+                    else
+                        input_key <= input_mem(3) & input_mem(2) & input_mem(1) & std_logic_vector(unsigned(S_AXIS_TDATA));
+                        state <= Key_Expansion;
+                        key_enable <= '1';                  
+                    end if;
+                  else
+                    nr_of_reads <= nr_of_reads - 1;
+                  end if;
             end if;
-            
+          
+          when Key_Expansion =>
+            key_enable <= '0';
+            if key_valid = '1' then
+                state <= Write_Outputs;
+                key <= output_key;
+                output <= output_key(1407 downto 1280);
+                nr_of_writes <= NUMBER_OF_OUTPUT_WORDS - 1;
+            end if;
+
           when Computing =>
-            if (nr_of_computes = 0) then
-              state        <= Write_Outputs;
-              nr_of_writes <= NUMBER_OF_OUTPUT_WORDS - 1;
-            else
-                enable <= '1';
-                case nr_of_computes is
-                    when 4 =>
-                        state <= Assemble;
-                        input <= input_mem(3);
-                    when 3 =>
-                        state <= Assemble;
-                        input <= input_mem(2);
-                    when 2 =>
-                        state <= Assemble;
-                        input <= input_mem(1);
-                    when 1 =>
-                        state <= Assemble;
-                        input <= input_mem(0);
-                    when others =>
-                        enable <= '0';
-                    end case;
-              end if;
-              
-          when Assemble =>
-            enable <= '0';
-            if valid = '1' then
-                output_mem(nr_of_computes) <= output;
-                state <= Computing;
-                nr_of_computes <= nr_of_computes - 1;
-            else
-                state <= Assemble;
+            cipher_enable <= '0';
+            if cipher_valid = '1' then
+              state        <= Write_Buffer;
             end if;
-                
+          
+          when Write_Buffer =>
+            output <= output_cipher;
+            state <= Write_Outputs;
+            nr_of_writes <= NUMBER_OF_OUTPUT_WORDS - 1;
+            
           when Write_Outputs =>
             if (M_AXIS_TREADY = '1') then
               if (nr_of_writes = 0) then
-                state <= Idle;                
+                state <= Idle;
               else
                 nr_of_writes <= nr_of_writes - 1;
               end if;
@@ -242,6 +226,23 @@ process (ACLK) is
       end if;
     end if;
    end process The_SW_accelerator;
+
+    key_expand  : entity work.key_expansion(behavioral)
+            port map(
+                clk => ACLK,
+                input => input_key,
+                output => output_key,
+                enable => key_enable,
+                valid => key_valid
+                );
+     invcipher: entity work.InvCipher(behavioral)
+           port map(
+                clk => ACLK,
+                input => input_cipher,
+                output => output_cipher,
+                keys => key,
+                enable => cipher_enable,
+                valid => cipher_valid
+                );  
    
-   
-end architecture EXAMPLE;
+end architecture EXAMPLE; 

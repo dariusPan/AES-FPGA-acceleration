@@ -41,13 +41,11 @@ entity InvCipher is
 end InvCipher;
 
 architecture Behavioral of InvCipher is
-    signal temp : std_logic_vector(31 downto 0) := (others => '0');
-    signal temp_round : std_logic_vector(31 downto 0) := (others => '0');
-    signal temp_new : std_logic_vector(31 downto 0) := (others => '0');
     signal temp_key : std_logic_vector(1407 downto 0) := (others => '0');
     signal temp_value : std_logic_vector(127 downto 0) := (others => '0');
     signal temp_value_new : std_logic_vector(127 downto 0) := (others => '0');
     signal temp_before_key : std_logic_vector(127 downto 0) := (others => '0');
+    signal temp_output : std_logic_vector(127 downto 0) := (others => '0');
     signal temp_add : std_logic_vector(127 downto 0) := (others => '0');
     signal end_round : std_logic_vector(127 downto 0) := (others => '0');
     type STATE_TYPE is (First, Rounding, Computing, Last);
@@ -57,66 +55,59 @@ architecture Behavioral of InvCipher is
 begin
 
 valid <= '1' when state = Last else '0';
-
+output <= temp_output;
 process (clk)
 	begin
         if rising_edge(clk) then
             case state is        
-                  when First =>
-                    if enable = '1' then
-                        state <= Rounding;
-                        nr_of_rounds <= 9;
-                        temp_value <= input xor keys(127 downto 0);
-                        temp_key <= keys;
-                    end if;
-                    
-                  when Rounding =>
+              when First =>
+                if enable = '1' then
+                    state <= Rounding;
+                    nr_of_rounds <= 9;
+                    temp_value <= input xor keys(127 downto 0);
+                    temp_key <= keys;
+                end if;
+                
+              when Rounding =>
+                if nr_of_rounds = 0 then
+                    temp_value <= end_round;
+                    state <= Last;
+                else
                     if nr_of_rounds = 9 then
                         temp_add <= temp_before_key xor keys(255 downto 128);
-                        state <= Computing;
                     elsif nr_of_rounds = 8 then
                         temp_add <= temp_before_key xor keys(383 downto 256);
-                        state <= Computing;
                     elsif nr_of_rounds = 7 then
                         temp_add <= temp_before_key xor keys(511 downto 384);
-                        state <= Computing;
                     elsif nr_of_rounds = 6 then
                         temp_add <= temp_before_key xor keys(639 downto 512);
-                        state <= Computing;
                     elsif nr_of_rounds = 5 then
                         temp_add <= temp_before_key xor keys(767 downto 640);
-                        state <= Computing;
                     elsif nr_of_rounds = 4 then
                         temp_add <= temp_before_key xor keys(895 downto 768);
-                        state <= Computing;
                     elsif nr_of_rounds = 3 then
                         temp_add <= temp_before_key xor keys(1023 downto 896);
-                        state <= Computing;
                     elsif nr_of_rounds = 2 then
                         temp_add <= temp_before_key xor keys(1151 downto 1024);
-                        state <= Computing;
                     elsif nr_of_rounds = 1 then
                         temp_add <= temp_before_key xor keys(1279 downto 1152);
-                        state <= Computing;
-                    elsif nr_of_rounds = 0 then
-                        temp_value <= end_round;
-                        state <= Last;
                     end if;
-                    temp(23 downto 0) <= temp_new(23 downto 0);
-                  
-                  when Computing =>
-                    temp_value <= end_round;
-                    state <= Rounding;
-                    nr_of_rounds <= nr_of_rounds - 1;
+                    state <= Computing;
+                end if;
+              
+              when Computing =>
+                temp_value <= end_round;
+                state <= Rounding;
+                nr_of_rounds <= nr_of_rounds - 1;
 
-                  when Last =>
-                  	output <= temp_before_key xor keys(1407 downto 1280);
-                  	state <= First;
+              when Last =>
+                temp_output <= temp_before_key xor keys(1407 downto 1280);
+                state <= First;
 	       end case;
 	   end if;
 	end process;
 
-shift : entity work.shift_rows(Behavioral)
+    shift : entity work.shift_rows(Behavioral)
        port map(
            input => temp_value,
            output => temp_value_new

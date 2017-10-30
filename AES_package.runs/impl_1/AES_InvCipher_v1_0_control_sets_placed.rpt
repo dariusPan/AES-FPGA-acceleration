@@ -1,0 +1,85 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
+| Date         : Mon Oct 30 19:07:23 2017
+| Host         : DESKTOP-1Q958FF running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file AES_InvCipher_v1_0_control_sets_placed.rpt
+| Design       : AES_InvCipher_v1_0
+| Device       : xc7z020
+-----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    22 |
+| Unused register locations in slices containing registers |    16 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            1325 |          233 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               7 |            4 |
+| Yes          | No                    | No                     |            2692 |          837 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-----------------+--------------------------------------+---------------------------------+------------------+----------------+
+|   Clock Signal  |             Enable Signal            |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++-----------------+--------------------------------------+---------------------------------+------------------+----------------+
+|  ACLK_IBUF_BUFG |                                      | FSM_sequential_state[2]_i_1_n_1 |                4 |              7 |
+|  ACLK_IBUF_BUFG | key_expand/temp_reg[15]_0[0]         |                                 |                8 |              8 |
+|  ACLK_IBUF_BUFG | key_expand/temp[31]_i_1_n_1          |                                 |                2 |              8 |
+|  ACLK_IBUF_BUFG | invcipher/nr_of_rounds[3]_i_1__0_n_1 |                                 |                3 |              9 |
+|  ACLK_IBUF_BUFG | key_expand/temp_mem_new[127]_i_1_n_1 |                                 |                8 |             32 |
+|  ACLK_IBUF_BUFG | key_expand/temp_mem_new[31]_i_1_n_1  |                                 |               11 |             32 |
+|  ACLK_IBUF_BUFG | key_expand/temp_mem_new[63]_i_1_n_1  |                                 |               10 |             32 |
+|  ACLK_IBUF_BUFG | key_expand/temp_mem_new[95]_i_1_n_1  |                                 |               11 |             32 |
+|  ACLK_IBUF_BUFG | input_mem[1][31]_i_1_n_1             |                                 |                7 |             32 |
+|  ACLK_IBUF_BUFG | input_mem[2][31]_i_1_n_1             |                                 |                9 |             32 |
+|  ACLK_IBUF_BUFG | input_mem[3][31]_i_1_n_1             |                                 |                7 |             32 |
+|  n_0_3730_BUFG  |                                      |                                 |               11 |             32 |
+|  ACLK_IBUF_BUFG | invcipher/cipher_valid               |                                 |               65 |            128 |
+|  ACLK_IBUF_BUFG | invcipher/state[0]_i_1__0_n_1        |                                 |               53 |            128 |
+|  ACLK_IBUF_BUFG | invcipher/temp_add[127]_i_1_n_1      |                                 |               89 |            128 |
+|  ACLK_IBUF_BUFG | key_expand/output_reg[0][0]          |                                 |               60 |            128 |
+|  ACLK_IBUF_BUFG | key_expand/temp_output[127]_i_1_n_1  |                                 |               40 |            128 |
+|  ACLK_IBUF_BUFG | key_expand/E[0]                      |                                 |               30 |            128 |
+|  ACLK_IBUF_BUFG | key_expand/input_key_reg[0][0]       |                                 |               23 |            128 |
+|  ACLK_IBUF_BUFG | key_expand/temp_round_reg_rep[0]_0   |                                 |               22 |            139 |
+|  ACLK_IBUF_BUFG |                                      |                                 |              222 |           1293 |
+|  ACLK_IBUF_BUFG | key_expand/key_reg[0][0]             |                                 |              379 |           1408 |
++-----------------+--------------------------------------+---------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 7      |                     1 |
+| 8      |                     2 |
+| 9      |                     1 |
+| 16+    |                    18 |
++--------+-----------------------+
+
+

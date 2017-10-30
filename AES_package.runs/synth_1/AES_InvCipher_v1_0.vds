@@ -1,0 +1,625 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Mon Oct 30 19:03:39 2017
+# Process ID: 2180
+# Current directory: C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.runs/synth_1
+# Command line: vivado.exe -log AES_InvCipher_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AES_InvCipher_v1_0.tcl
+# Log file: C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.runs/synth_1/AES_InvCipher_v1_0.vds
+# Journal file: C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source AES_InvCipher_v1_0.tcl -notrace
+Command: synth_design -top AES_InvCipher_v1_0 -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11448 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 282.898 ; gain = 73.254
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'AES_InvCipher_v1_0' [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/AES_v1_0.vhd:115]
+INFO: [Synth 8-638] synthesizing module 'key_expansion' [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/key_expansion.vhd:45]
+INFO: [Synth 8-638] synthesizing module 's_box' [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/s_boxing.vhd:11]
+INFO: [Synth 8-226] default block is never used [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/s_boxing.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 's_box' (1#1) [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/s_boxing.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'key_expansion' (2#1) [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/key_expansion.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'InvCipher' [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/InvCipher.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'shift_rows' [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/shift_rows.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'shift_rows' (3#1) [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/shift_rows.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'InvSub' [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/InvSub.vhd:30]
+INFO: [Synth 8-638] synthesizing module 's_box_invert' [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/s_box_invert.vhd:20]
+INFO: [Synth 8-226] default block is never used [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/s_box_invert.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 's_box_invert' (4#1) [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/s_box_invert.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'InvSub' (5#1) [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/InvSub.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'inv_mix_columns' [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/inv_mix_columns.vhd:31]
+INFO: [Synth 8-638] synthesizing module 'mult_9' [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/mult_9.vhd:39]
+INFO: [Synth 8-226] default block is never used [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/mult_9.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'mult_9' (6#1) [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/mult_9.vhd:39]
+INFO: [Synth 8-638] synthesizing module 'mult_b' [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/mult_b.vhd:39]
+INFO: [Synth 8-226] default block is never used [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/mult_b.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'mult_b' (7#1) [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/mult_b.vhd:39]
+INFO: [Synth 8-638] synthesizing module 'mult_d' [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/mult_d.vhd:39]
+INFO: [Synth 8-226] default block is never used [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/mult_d.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'mult_d' (8#1) [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/mult_d.vhd:39]
+INFO: [Synth 8-638] synthesizing module 'mult_e' [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/mult_e.vhd:39]
+INFO: [Synth 8-226] default block is never used [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/mult_e.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'mult_e' (9#1) [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/mult_e.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'inv_mix_columns' (10#1) [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/inv_mix_columns.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'InvCipher' (11#1) [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/InvCipher.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'AES_InvCipher_v1_0' (12#1) [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/AES_v1_0.vhd:115]
+WARNING: [Synth 8-3331] design AES_InvCipher_v1_0 has unconnected port S_AXIS_TLAST
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 325.512 ; gain = 115.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 325.512 ; gain = 115.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 325.512 ; gain = 115.867
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nr_of_computes" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nr_of_computes" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "temp_mem_new" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "valid" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "temp_value" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'AES_InvCipher_v1_0'
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nr_of_reads" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nr_of_writes" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "input_mem_reg[1]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "input_mem_reg[2]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "input_mem_reg[3]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "S_AXIS_TREADY" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "M_AXIS_TVALID" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nr_of_reads" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nr_of_writes" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "input_mem_reg[1]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "input_mem_reg[2]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "input_mem_reg[3]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "S_AXIS_TREADY" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "M_AXIS_TVALID" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+             read_inputs |                              001 |                              010
+               computing |                              010 |                              011
+            write_buffer |                              101 |                              101
+           key_expansion |                              011 |                              001
+           write_outputs |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'AES_InvCipher_v1_0'
+WARNING: [Synth 8-327] inferring latch for variable 'M_AXIS_TDATA_reg' [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/AES_v1_0.vhd:156]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 384.832 ; gain = 175.188
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register temp_output_reg [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/key_expansion.vhd:60]
+INFO: [Synth 8-3538] Detected potentially large (wide) register key_reg [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/AES_v1_0.vhd:201]
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 2     
++---XORs : 
+	   2 Input    128 Bit         XORs := 11    
+	   2 Input     32 Bit         XORs := 4     
+	   2 Input      8 Bit         XORs := 10    
+	   4 Input      8 Bit         XORs := 16    
++---Registers : 
+	             1408 Bit    Registers := 2     
+	              128 Bit    Registers := 8     
+	               32 Bit    Registers := 5     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   6 Input   1408 Bit        Muxes := 1     
+	   4 Input   1408 Bit        Muxes := 1     
+	   2 Input   1408 Bit        Muxes := 1     
+	   4 Input    128 Bit        Muxes := 3     
+	   5 Input    128 Bit        Muxes := 1     
+	   6 Input    128 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 3     
+	  12 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 2     
+	   6 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 16    
+	   4 Input      1 Bit        Muxes := 7     
+	   6 Input      1 Bit        Muxes := 15    
+	   5 Input      1 Bit        Muxes := 1     
+	  14 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register temp_output_reg [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/key_expansion.vhd:60]
+INFO: [Synth 8-3538] Detected potentially large (wide) register key_reg [C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.srcs/sources_1/new/AES_v1_0.vhd:201]
+Hierarchical RTL Component report 
+Module AES_InvCipher_v1_0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	             1408 Bit    Registers := 1     
+	              128 Bit    Registers := 3     
+	               32 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   6 Input    128 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 14    
+	   6 Input      1 Bit        Muxes := 14    
+	   4 Input      1 Bit        Muxes := 1     
+Module key_expansion 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 4     
+	   2 Input      8 Bit         XORs := 10    
++---Registers : 
+	             1408 Bit    Registers := 1     
+	              128 Bit    Registers := 2     
+	               32 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   6 Input   1408 Bit        Muxes := 1     
+	   4 Input   1408 Bit        Muxes := 1     
+	   2 Input   1408 Bit        Muxes := 1     
+	   4 Input    128 Bit        Muxes := 2     
+	   5 Input    128 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 2     
+	  12 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+	   6 Input      1 Bit        Muxes := 1     
+Module inv_mix_columns 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      8 Bit         XORs := 16    
+Module InvCipher 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input    128 Bit         XORs := 11    
++---Registers : 
+	              128 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input    128 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	  14 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "temp_mem_new" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-3331] design AES_InvCipher_v1_0 has unconnected port S_AXIS_TLAST
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[31]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[30]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[29]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[28]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[27]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[26]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[25]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[24]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[23]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[22]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[21]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[20]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[19]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[18]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[17]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[16]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[15]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[14]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[13]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[12]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[11]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[10]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[9]) is unused and will be removed from module key_expansion.
+WARNING: [Synth 8-3332] Sequential element (temp_round_reg_rep[8]) is unused and will be removed from module key_expansion.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:15 . Memory (MB): peak = 603.527 ; gain = 393.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++----------------+------------------------+---------------+----------------+
+|Module Name     | RTL Object             | Depth x Width | Implemented As | 
++----------------+------------------------+---------------+----------------+
+|s_box           | temp_value             | 256x8         | LUT            | 
+|s_box_invert    | invert_value           | 256x8         | LUT            | 
+|mult_9          | temp_value             | 256x8         | LUT            | 
+|mult_b          | temp_value             | 256x8         | LUT            | 
+|mult_d          | temp_value             | 256x8         | LUT            | 
+|mult_e          | temp_value             | 256x8         | LUT            | 
+|key_expansion   | sbox1/temp_value       | 256x8         | Block RAM      | 
+|key_expansion   | sbox4/temp_value       | 256x8         | LUT            | 
+|key_expansion   | sbox3/temp_value       | 256x8         | Block RAM      | 
+|key_expansion   | sbox2/temp_value       | 256x8         | Block RAM      | 
+|InvSub          | box_16/invert_value    | 256x8         | LUT            | 
+|InvSub          | box_15/invert_value    | 256x8         | LUT            | 
+|InvSub          | box_14/invert_value    | 256x8         | LUT            | 
+|InvSub          | box_13/invert_value    | 256x8         | LUT            | 
+|InvSub          | box_12/invert_value    | 256x8         | LUT            | 
+|InvSub          | box_11/invert_value    | 256x8         | LUT            | 
+|InvSub          | box_10/invert_value    | 256x8         | LUT            | 
+|InvSub          | box_9/invert_value     | 256x8         | LUT            | 
+|InvSub          | box_8/invert_value     | 256x8         | LUT            | 
+|InvSub          | box_7/invert_value     | 256x8         | LUT            | 
+|InvSub          | box_6/invert_value     | 256x8         | LUT            | 
+|InvSub          | box_5/invert_value     | 256x8         | LUT            | 
+|InvSub          | box_4/invert_value     | 256x8         | LUT            | 
+|InvSub          | box_3/invert_value     | 256x8         | LUT            | 
+|InvSub          | box_2/invert_value     | 256x8         | LUT            | 
+|InvSub          | box_1/invert_value     | 256x8         | LUT            | 
+|inv_mix_columns | r1_mult_9_4/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r1_mult_b_2/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r1_mult_d_3/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r1_mult_e_1/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r1_mult_9_1/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r1_mult_b_3/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r1_mult_d_4/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r1_mult_e_2/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r1_mult_9_2/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r1_mult_b_4/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r1_mult_d_1/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r1_mult_e_3/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r1_mult_9_3/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r1_mult_b_1/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r1_mult_d_2/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r1_mult_e_4/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r2_mult_9_4/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r2_mult_b_2/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r2_mult_d_3/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r2_mult_e_1/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r2_mult_9_1/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r2_mult_b_3/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r2_mult_d_4/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r2_mult_e_2/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r2_mult_9_2/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r2_mult_b_4/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r2_mult_d_1/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r2_mult_e_3/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r2_mult_9_3/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r2_mult_b_1/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r2_mult_d_2/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r2_mult_e_4/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r3_mult_9_4/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r3_mult_b_2/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r3_mult_d_3/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r3_mult_e_1/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r3_mult_9_1/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r3_mult_b_3/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r3_mult_d_4/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r3_mult_e_2/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r3_mult_9_2/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r3_mult_b_4/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r3_mult_d_1/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r3_mult_e_3/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r3_mult_9_3/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r3_mult_b_1/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r3_mult_d_2/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r3_mult_e_4/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r4_mult_9_4/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r4_mult_b_2/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r4_mult_d_3/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r4_mult_e_1/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r4_mult_9_1/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r4_mult_b_3/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r4_mult_d_4/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r4_mult_e_2/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r4_mult_9_2/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r4_mult_b_4/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r4_mult_d_1/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r4_mult_e_3/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r4_mult_9_3/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r4_mult_b_1/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r4_mult_d_2/temp_value | 256x8         | LUT            | 
+|inv_mix_columns | r4_mult_e_4/temp_value | 256x8         | LUT            | 
++----------------+------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:15 . Memory (MB): peak = 603.527 ; gain = 393.883
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance key_expandi_59 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:13 ; elapsed = 00:01:21 . Memory (MB): peak = 603.527 ; gain = 393.883
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:15 ; elapsed = 00:01:23 . Memory (MB): peak = 603.527 ; gain = 393.883
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:15 ; elapsed = 00:01:23 . Memory (MB): peak = 603.527 ; gain = 393.883
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:15 ; elapsed = 00:01:23 . Memory (MB): peak = 603.527 ; gain = 393.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:16 ; elapsed = 00:01:23 . Memory (MB): peak = 603.527 ; gain = 393.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:01:27 . Memory (MB): peak = 603.527 ; gain = 393.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:19 ; elapsed = 00:01:27 . Memory (MB): peak = 603.527 ; gain = 393.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     2|
+|2     |LUT1     |     1|
+|3     |LUT2     |   278|
+|4     |LUT3     |  1530|
+|5     |LUT4     |   570|
+|6     |LUT5     |   233|
+|7     |LUT6     |  1396|
+|8     |MUXF7    |   272|
+|9     |MUXF8    |   136|
+|10    |RAMB18E1 |     2|
+|11    |FDRE     |  3992|
+|12    |LD       |    32|
+|13    |IBUF     |    36|
+|14    |OBUF     |    35|
++------+---------+------+
+
+Report Instance Areas: 
++------+------------------+----------------+------+
+|      |Instance          |Module          |Cells |
++------+------------------+----------------+------+
+|1     |top               |                |  8515|
+|2     |  invcipher       |InvCipher       |  2836|
+|3     |    invert        |InvSub          |   384|
+|4     |      box_1       |s_box_invert    |    24|
+|5     |      box_10      |s_box_invert_60 |    24|
+|6     |      box_11      |s_box_invert_61 |    24|
+|7     |      box_12      |s_box_invert_62 |    24|
+|8     |      box_13      |s_box_invert_63 |    24|
+|9     |      box_14      |s_box_invert_64 |    24|
+|10    |      box_15      |s_box_invert_65 |    24|
+|11    |      box_16      |s_box_invert_66 |    24|
+|12    |      box_2       |s_box_invert_67 |    24|
+|13    |      box_3       |s_box_invert_68 |    24|
+|14    |      box_4       |s_box_invert_69 |    24|
+|15    |      box_5       |s_box_invert_70 |    24|
+|16    |      box_6       |s_box_invert_71 |    24|
+|17    |      box_7       |s_box_invert_72 |    24|
+|18    |      box_8       |s_box_invert_73 |    24|
+|19    |      box_9       |s_box_invert_74 |    24|
+|20    |    mix           |inv_mix_columns |   488|
+|21    |      r1_mult_9_1 |mult_9          |     3|
+|22    |      r1_mult_9_2 |mult_9_0        |     3|
+|23    |      r1_mult_9_3 |mult_9_1        |     3|
+|24    |      r1_mult_9_4 |mult_9_2        |     3|
+|25    |      r1_mult_b_1 |mult_b          |     5|
+|26    |      r1_mult_b_2 |mult_b_3        |     6|
+|27    |      r1_mult_b_3 |mult_b_4        |     5|
+|28    |      r1_mult_b_4 |mult_b_5        |     6|
+|29    |      r1_mult_d_1 |mult_d          |     6|
+|30    |      r1_mult_d_2 |mult_d_6        |     6|
+|31    |      r1_mult_d_3 |mult_d_7        |     6|
+|32    |      r1_mult_d_4 |mult_d_8        |     6|
+|33    |      r1_mult_e_1 |mult_e          |     4|
+|34    |      r1_mult_e_2 |mult_e_9        |     5|
+|35    |      r1_mult_e_3 |mult_e_10       |     4|
+|36    |      r1_mult_e_4 |mult_e_11       |     5|
+|37    |      r2_mult_9_1 |mult_9_12       |     3|
+|38    |      r2_mult_9_2 |mult_9_13       |     3|
+|39    |      r2_mult_9_3 |mult_9_14       |     3|
+|40    |      r2_mult_9_4 |mult_9_15       |     3|
+|41    |      r2_mult_b_1 |mult_b_16       |     5|
+|42    |      r2_mult_b_2 |mult_b_17       |     6|
+|43    |      r2_mult_b_3 |mult_b_18       |     5|
+|44    |      r2_mult_b_4 |mult_b_19       |     6|
+|45    |      r2_mult_d_1 |mult_d_20       |     6|
+|46    |      r2_mult_d_2 |mult_d_21       |     6|
+|47    |      r2_mult_d_3 |mult_d_22       |     6|
+|48    |      r2_mult_d_4 |mult_d_23       |     6|
+|49    |      r2_mult_e_1 |mult_e_24       |     4|
+|50    |      r2_mult_e_2 |mult_e_25       |     5|
+|51    |      r2_mult_e_3 |mult_e_26       |     4|
+|52    |      r2_mult_e_4 |mult_e_27       |     5|
+|53    |      r3_mult_9_1 |mult_9_28       |     3|
+|54    |      r3_mult_9_2 |mult_9_29       |     3|
+|55    |      r3_mult_9_3 |mult_9_30       |     3|
+|56    |      r3_mult_9_4 |mult_9_31       |     3|
+|57    |      r3_mult_b_1 |mult_b_32       |     5|
+|58    |      r3_mult_b_2 |mult_b_33       |     6|
+|59    |      r3_mult_b_3 |mult_b_34       |     5|
+|60    |      r3_mult_b_4 |mult_b_35       |     6|
+|61    |      r3_mult_d_1 |mult_d_36       |     6|
+|62    |      r3_mult_d_2 |mult_d_37       |     6|
+|63    |      r3_mult_d_3 |mult_d_38       |     6|
+|64    |      r3_mult_d_4 |mult_d_39       |     6|
+|65    |      r3_mult_e_1 |mult_e_40       |     4|
+|66    |      r3_mult_e_2 |mult_e_41       |     5|
+|67    |      r3_mult_e_3 |mult_e_42       |     4|
+|68    |      r3_mult_e_4 |mult_e_43       |     5|
+|69    |      r4_mult_9_1 |mult_9_44       |     3|
+|70    |      r4_mult_9_2 |mult_9_45       |     3|
+|71    |      r4_mult_9_3 |mult_9_46       |     3|
+|72    |      r4_mult_9_4 |mult_9_47       |     3|
+|73    |      r4_mult_b_1 |mult_b_48       |     5|
+|74    |      r4_mult_b_2 |mult_b_49       |     6|
+|75    |      r4_mult_b_3 |mult_b_50       |     5|
+|76    |      r4_mult_b_4 |mult_b_51       |     6|
+|77    |      r4_mult_d_1 |mult_d_52       |     6|
+|78    |      r4_mult_d_2 |mult_d_53       |     6|
+|79    |      r4_mult_d_3 |mult_d_54       |     6|
+|80    |      r4_mult_d_4 |mult_d_55       |     6|
+|81    |      r4_mult_e_1 |mult_e_56       |     4|
+|82    |      r4_mult_e_2 |mult_e_57       |     5|
+|83    |      r4_mult_e_3 |mult_e_58       |     4|
+|84    |      r4_mult_e_4 |mult_e_59       |     5|
+|85    |  key_expand      |key_expansion   |  3596|
+|86    |    sbox4         |s_box           |    24|
++------+------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:19 ; elapsed = 00:01:27 . Memory (MB): peak = 603.527 ; gain = 393.883
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 27 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 603.527 ; gain = 393.883
+Synthesis Optimization Complete : Time (s): cpu = 00:01:19 ; elapsed = 00:01:27 . Memory (MB): peak = 603.527 ; gain = 393.883
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 70 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  LD => LDCE: 32 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+87 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 626.723 ; gain = 417.078
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Darius/Desktop/Y4S1/EE4218/AES_package/AES_package.runs/synth_1/AES_InvCipher_v1_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 626.723 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 30 19:05:20 2017...

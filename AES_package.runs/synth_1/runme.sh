@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log myip_v1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source myip_v1_0.tcl
+EAStep vivado -log AES_InvCipher_v1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source AES_InvCipher_v1_0.tcl
